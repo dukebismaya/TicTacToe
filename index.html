@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Tic Tac Toe</title>
+    <link rel="stylesheet" href="styles.css">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;600;700&display=swap" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+</head>
+<body class="light-theme">
+    <div id="game-start-modal" class="modal">
+        <div class="modal-content">
+            <h2>Welcome to Tic Tac Toe By Bismaya!</h2>
+            <div class="game-mode-selection">
+                <h3>Choose Game Mode:</h3>
+                <div class="mode-buttons">
+                    <button id="start-vs-ai" class="btn active">Player vs AI</button>
+                    <button id="start-vs-player" class="btn">Player vs Player</button>
+                </div>
+            </div>
+            
+            <div id="modal-symbol-selector" class="modal-section">
+                <h3>Choose Your Symbol:</h3>
+                <div class="symbol-options large">
+                    <div class="symbol-btn large active" data-symbol="X">X</div>
+                    <div class="symbol-btn large" data-symbol="O">O</div>
+                </div>
+            </div>
+            
+            <div id="modal-difficulty-selector" class="modal-section">
+                <h3>Select Difficulty:</h3>
+                <select id="difficultySelect" class="difficulty-dropdown">
+                    <option value="easy">Easy</option>
+                    <option value="medium">Medium</option>
+                    <option value="hard">Hard</option>
+                    <option value="impossible">Impossible</option>
+                </select>
+            </div>
+            
+            <button id="start-game-btn" class="btn start-button">Start Game</button>
+        </div>
+    </div>
+    
+    <div class="theme-switch-wrapper">
+        <div class="theme-switch">
+            <div class="slider">
+                <i class="fas fa-sun"></i>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container">
+        <h1 class="title">Tic Tac Toe</h1>
+        <div class="scoreboard">
+            <div class="score-item">
+                <div class="player-label">Player X</div>
+                <div class="player-icon x-icon">X</div>
+                <div class="score" id="score-x">0</div>
+            </div>
+            <div class="score-divider">:</div>
+            <div class="score-item">
+                <div class="score" id="score-o">0</div>
+                <div class="player-icon o-icon">O</div>
+                <div class="player-label">Player O</div>
+            </div>
+        </div>
+        
+        <div class="difficulty-selector" id="difficulty-selector">
+            <select id="difficultySelect" class="difficulty-dropdown">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+                <option value="impossible">Impossible</option>
+            </select>
+        </div>
+        
+        <div class="symbol-selector" id="symbol-selector">
+            <p class="symbol-title">Choose your symbol:</p>
+            <div class="symbol-options">
+                <div class="symbol-btn active" data-symbol="X">X</div>
+                <div class="symbol-btn" data-symbol="O">O</div>
+            </div>
+        </div>
+        
+        <div class="game-status" id="status"></div>
+        
+        <div class="board" id="board"></div>
+        
+        <div class="buttons">
+            <button id="playerVsPlayer" class="btn active">
+                <i class="fas fa-user"></i> vs <i class="fas fa-user"></i>
+            </button>
+            <button id="playerVsAI" class="btn">
+                <i class="fas fa-user"></i> vs <i class="fas fa-robot"></i>
+            </button>
+            <button id="reset" class="btn">
+                <i class="fas fa-redo-alt"></i> Reset
+            </button>
+        </div>
+        <footer class="footer">
+            <div class="copyright">
+                <span>&copy; Created By Bismaya</span>
+            </div>
+            <div class="footer-links">
+                <a href="https://github.com/dukebismaya" class="social-link"><i class="fab fa-github"></i></a>
+                <a href="#" class="social-link"><i class="fab fa-linkedin"></i></a>
+                <a href="#" class="social-link"><i class="fas fa-envelope"></i></a>
+            </div>
+        </footer>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
